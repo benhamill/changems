@@ -15,6 +15,11 @@ end
 
 group :test, :development do
   gem 'pry'
+  gem 'pry-doc'
   gem 'heroku'
   gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'database_cleaner'
+  gem 'fakeweb'
 end

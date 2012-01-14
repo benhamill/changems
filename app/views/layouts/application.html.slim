@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Changems
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  body
+    header
+      h1= link_to "Changems", root_url
+
+    section#main
+      section#notifications
+        - if notice
+          p.flash#notice = notice
+        - if alert
+          p.flash#alert = alert
+
+      section
+        = yield
+
+    footer
+        p Probably some links some day.
