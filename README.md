@@ -9,6 +9,7 @@ Some ideas for features I'll be working towards. I'm open to other ideas. In no 
 - Search by gem name
 - API end point to get the changes in a given release
 - API end point to get the changes between 2 releases
+- A design that looks good
 
 ## Getting started with the project
 
