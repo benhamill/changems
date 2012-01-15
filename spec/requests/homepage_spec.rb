@@ -13,7 +13,9 @@ describe "Visiting the homepage" do
 
   context "with a search term" do
     before(:each) do
-      visit root_path(search: 'none')
+      visit root_path
+      fill_in 'search', with: 'none'
+      click_button 'Search'
     end
 
     it "displays matching gems" do
