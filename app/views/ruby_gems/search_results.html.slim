@@ -1,0 +1,4 @@
+h2 Search Results
+ul.gems
+  - @gems.each do |gem|
+    li= link_to gem.name, ruby_gem_url(gem)

@@ -1,11 +1,23 @@
 require 'spec_helper'
 
 describe "Visiting the homepage" do
-  before(:each) do
-    visit root_url
+  context "with no search term" do
+    before(:each) do
+      visit root_path
+    end
+
+    it "displays a welcome message" do
+      page.should have_content("Welcome")
+    end
   end
 
-  it "displays the site title" do
-    page.should have_content("Changems")
+  context "with a search term" do
+    before(:each) do
+      visit root_path(search: 'none')
+    end
+
+    it "displays matching gems" do
+      page.should have_link('none_such')
+    end
   end
 end

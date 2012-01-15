@@ -7,6 +7,7 @@ gem 'thin'
 gem 'jquery-rails'
 gem 'slim'
 gem 'draper'
+gem 'texticle', require: 'texticle/rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.5'

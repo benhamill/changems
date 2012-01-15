@@ -159,6 +159,8 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     temple (0.3.5)
     term-ansicolor (1.0.7)
+    texticle (2.0.2)
+      activerecord (>= 3.0.0)
     thin (1.3.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -195,5 +197,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.1.5)
   slim
+  texticle
   thin
   uglifier (>= 1.0.3)
