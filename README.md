@@ -32,7 +32,9 @@ First, run 'em.
 
     $ rake spec
 
-Note: The app is designed to import change logs via a background job, so we don't have creation, updates or deletes. Thus, we just load the seed file before the test suite, run all the tests and then delete it. Knowing what's in the seed file will make the tests make more sense, so make sure to give it a glance.
+The app is designed to import change logs via a background job, so we don't have creates, updates or deletes. Thus, we just load the seed file before the test suite, run all the tests and then delete it. Knowing what's in the seed file will make the tests make more sense, so make sure to give it a glance.
+
+My personal philosophy is that you should have high level tests that cover everything and only write unit tests to cover tricky stuff in isolation. So, in general, prefer adding a request spec that examines a change or feature from the user point of view. If there's some particularly hairy piece of business logic in a model somewhere, that's a great time to roll out the unit-style tests.
 
 ## Help?
 
