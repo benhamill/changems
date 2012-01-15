@@ -7,8 +7,10 @@ On the [Ruby Rogues](http://rubyrogues.com) podcast, [Nick Quaranto](http://quar
 Some ideas for features I'll be working towards. I'm open to other ideas. In no particular order:
 
 - API end point to get the changes in a given release
-- API end point to get the changes between 2 releases
+- API end point to get the changes between 2 arbitrary releases
+- A web view to see the changes between 2 arbitrary releases
 - A design that looks good
+- Something intereting on the home page
 
 ## Getting Started With The Project
 
