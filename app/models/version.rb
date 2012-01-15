@@ -4,6 +4,15 @@ class Version < ActiveRecord::Base
 
   before_save :split_out_version_number
 
+  def self.semantic_order(sort = 'asc')
+    self.order(
+      "#{self.table_name}.major #{sort}",
+      "#{self.table_name}.minor #{sort}",
+      "#{self.table_name}.patch #{sort}",
+      "#{self.table_name}.prerelease #{sort}"
+    )
+  end
+
   private
 
   def split_out_version_number

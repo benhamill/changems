@@ -10,5 +10,5 @@ h2= @gem.name
 
 h3 Versions
 ul.versions
-  - @gem.versions.each do |version|
+  - @gem.versions.semantic_order.each do |version|
     li= version.number
