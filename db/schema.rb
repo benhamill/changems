@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120114223806) do
+ActiveRecord::Schema.define(:version => 20120115032233) do
+
+  create_table "changes", :force => true do |t|
+    t.text     "description"
+    t.integer  "version_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ruby_gems", :force => true do |t|
     t.string   "name"

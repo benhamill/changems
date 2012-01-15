@@ -4,5 +4,6 @@ class RubyGemsController < ApplicationController
 
   def show
     @gem = RubyGem.find(params[:id])
+    @current_version = VersionDecorator.decorate(@gem.current_version)
   end
 end

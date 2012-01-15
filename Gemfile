@@ -6,6 +6,7 @@ gem 'pg'
 gem 'thin'
 gem 'jquery-rails'
 gem 'slim'
+gem 'draper'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.5'
