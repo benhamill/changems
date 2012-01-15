@@ -45,4 +45,4 @@ Oh please yes!
 3. Write test.
 4. Make test pass.
 5. Send pull request.
-6. Have a beer.
+6. If I'm particularly slow to respond, add a comment **@mentioning** me and I'll get an email.
