@@ -9,6 +9,10 @@ html
     header
       h1= link_to "Changems", root_url
 
+      = form_tag(root_path) do
+        = text_field_tag :search
+        = submit_tag 'Search'
+
     section#main
       section#notifications
         - if notice
