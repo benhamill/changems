@@ -6,12 +6,11 @@ On the [Ruby Rogues](http://rubyrogues.com) podcast, [Nick Quaranto](http://quar
 
 Some ideas for features I'll be working towards. I'm open to other ideas. In no particular order:
 
-- Search by gem name
 - API end point to get the changes in a given release
 - API end point to get the changes between 2 releases
 - A design that looks good
 
-## Getting started with the project
+## Getting Started With The Project
 
 ### 0. Ruby Version
 
