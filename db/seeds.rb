@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+RubyGem.create(:name => 'none_such') do |gem|
+  gem.versions.build(:number => '1.0.0') do |version|
+    version.changes.build(:description => 'Solidified API.')
+    version.changes.build(:description => 'Reduced entropy caused by calling NoneSuch::Collider.collide!')
+  end
+
+  gem.versions.build(:number => '1.0.1') do |version|
+    version.changes.build(:description => "Fixed bug involving calling NoneSuch::Portal.new when already within another portal's execution block.")
+  end
+end

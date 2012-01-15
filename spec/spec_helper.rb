@@ -18,13 +18,11 @@ RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.clean
-  end
-
-  config.before(:each) do
     DatabaseCleaner.start
+    require "#{Rails.root}/db/seeds"
   end
 
-  config.after(:each) do
+  config.after(:suite) do
     DatabaseCleaner.clean
   end
 end
