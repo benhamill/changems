@@ -1,1 +1,7 @@
 h2= @gem.name
+
+- if @gem.versions.any?
+  h3 Versions
+  ul.versions
+    - @gem.versions.each do |version|
+      li= version.number
