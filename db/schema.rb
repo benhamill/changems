@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120115032233) do
+ActiveRecord::Schema.define(:version => 20120115171056) do
 
   create_table "changes", :force => true do |t|
     t.text     "description"
@@ -31,6 +31,12 @@ ActiveRecord::Schema.define(:version => 20120115032233) do
     t.integer  "ruby_gem_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "major",       :default => 0
+    t.integer  "minor",       :default => 0
+    t.integer  "patch",       :default => 0
+    t.string   "special"
   end
+
+  add_index "versions", ["major", "minor", "patch", "special"], :name => "index_versions_on_major_and_minor_and_patch_and_special"
 
 end
