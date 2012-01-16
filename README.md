@@ -2,7 +2,7 @@
 
 On the [Ruby Rogues](http://rubyrogues.com) podcast, [Nick Quaranto](http://quaran.to) (of [Gem Cutter](http://rubygems.org) fame) was talking about rubygems-related projects he'd like to see. He mentioned something about a web app that would do something with gems' change logs. I thought that sounded like an interesting idea.
 
-I envision an app that tracks entries that gem authors put in their change log and allows users to easily see what changes are associated with which version. Users will be able to search for gems by name and then brows their versions or select a range of versions to see changes from.
+I envision an app that tracks entries that gem authors put in their change log and allows users to easily see what changes are associated with which version. Users will be able to search for gems by name and then browse their versions or select a range of versions to see changes from.
 
 ## Road Map
 
