@@ -9,6 +9,6 @@ class VersionsController < ApplicationController
     @end_version = Version.find(params[:end_id])
     @gem = @start_version.ruby_gem
 
-    @versions = VersionDecorator.decorate(@gem.versions.between(@start_version, @end_version))
+    @versions = VersionDecorator.decorate(@gem.versions.between(@start_version, @end_version).semantic_order)
   end
 end
