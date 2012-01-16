@@ -20,4 +20,4 @@ h3 View Range
 
   = label_tag :end_version
   = select_tag :end_id, options_from_collection_for_select(@versions[1..-1], :id, :number, @current_version.id), id: :end_version
-  = submit_tag 'View'
+  = submit_tag 'View Range'
