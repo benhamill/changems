@@ -1,1 +1,6 @@
 p Welcome to Changems!
+
+h2 Featured Gems
+ul.featured_gems
+  - @featured_gems.each do |gem|
+    li= link_to gem.name, ruby_gem_url(gem)
