@@ -30,8 +30,8 @@ describe "Visiting a gem's page" do
     find('.current_version .changes').should have_content("Fixed bug involving calling NoneSuch::Portal.new when already within another portal's execution block.")
   end
 
-  it "has a form for comparing two versions" do
-    find('.compare_form').should have_select('.start_version', options: %w(0.0.1 0.0.2 0.1.0 0.1.1 1.0.0))
-    find('.compare_form').should have_select('.end_version', options: %w(0.0.2 0.1.0 0.1.1 1.0.0 1.0.1))
+  it "has a form for seeing all the changes between two versions" do
+    find('.range_form').should have_select('start_version', options: %w(0.0.1 0.0.2 0.1.0 0.1.1 1.0.0))
+    find('.range_form').should have_select('end_version', options: %w(0.0.2 0.1.0 0.1.1 1.0.0 1.0.1))
   end
 end
