@@ -25,7 +25,7 @@ Bundle the gems
 
     $ bundle install
 
-Create, migrate and see the DB.
+Create, migrate and seed the DB.
 
     $ rake db:setup
 
