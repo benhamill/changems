@@ -1,9 +1,7 @@
 h2= @gem.name
 
 .current_version
-  h3
-    | Current Version:
-    = @current_version.number
+  h3 Current Version: #{@current_version.number}
   ul.changes
     - @current_version.changes.each do |change|
       li= change
