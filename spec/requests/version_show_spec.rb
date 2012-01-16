@@ -26,7 +26,7 @@ describe "Visiting a version's page" do
     version_lis[0].should have_content('0.1.1')
     changes_lis = version_lis[0].all('li')
     changes_lis[0].should have_content('Update contributers in gemspec.')
-    changes_lis[1].should have_content'Fixed a bug where a NoneSuch::Portal would forget where it was anchored and destroy permanently anything that passed through.')
-    changes_lis[2].should have_content'Fixed a divide-by-zero bug.')
+    changes_lis[1].should have_content('Fixed a bug where a NoneSuch::Portal would forget where it was anchored and destroy permanently anything that passed through.')
+    changes_lis[2].should have_content('Fixed a divide-by-zero bug.')
   end
 end
