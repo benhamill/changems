@@ -16,7 +16,7 @@ Some ideas for features I'll be working towards. I'm open to other ideas. In no 
 
 ### 0. Ruby Version
 
-Changems is designed to run on Ruby **1.9.3**.
+Changems is designed to run on Ruby **1.9.2**.
 
 ### 1. Setup
 
