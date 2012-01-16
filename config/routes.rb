@@ -25,9 +25,7 @@ Changems::Application.routes.draw do
   #     end
   #   end
 
-  resources :ruby_gems, :only => [:index, :show] do
-    # resources :versions
-  end
+  resources :ruby_gems, :only => [:index, :show]
 
   # Sample resource route with more complex sub-resources
   #   resources :products do
