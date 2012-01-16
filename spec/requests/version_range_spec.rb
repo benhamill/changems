@@ -6,8 +6,8 @@ describe "Visiting a version range page" do
   before(:each) do
     visit ruby_gem_url(gem)
 
-    select '0.1.1', from: :start_version
-    select '1.0.1', from: :end_version
+    select '0.1.1', from: 'Start version'
+    select '1.0.1', from: 'End version'
 
     click_button 'View Range'
   end

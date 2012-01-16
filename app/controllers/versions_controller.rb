@@ -3,4 +3,7 @@ class VersionsController < ApplicationController
     @version = VersionDecorator.find(params[:id])
     @gem = @version.ruby_gem
   end
+
+  def range
+  end
 end

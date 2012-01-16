@@ -12,7 +12,7 @@ ul.versions
     li= link_to version.number, version_url(version)
 
 h3 View Range
-= form_tag('#', class: :range_form) do
+= form_tag(range_versions_url, class: :range_form, method: :get) do
   = label_tag :start_version
   = select_tag :start_id, options_from_collection_for_select(@versions[0..-2], :id, :number, @versions[0].id), id: :start_version
 
