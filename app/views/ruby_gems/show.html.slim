@@ -11,7 +11,7 @@ h2= @gem.name
 h3 Versions
 ul.versions
   - @versions.each do |version|
-    li= version.number
+    li= link_to version.number, version_url(version)
 
 h3 View Range
 = form_tag('#', class: :range_form) do

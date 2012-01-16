@@ -14,12 +14,12 @@ describe "Visiting a gem's page" do
   it "lists the known versions" do
     lis = find('.versions').all('li')
 
-    lis[0].should have_content('0.0.1')
-    lis[1].should have_content('0.0.2')
-    lis[2].should have_content('0.1.0')
-    lis[3].should have_content('0.1.1')
-    lis[4].should have_content('1.0.0')
-    lis[5].should have_content('1.0.1')
+    lis[0].should have_link('0.0.1')
+    lis[1].should have_link('0.0.2')
+    lis[2].should have_link('0.1.0')
+    lis[3].should have_link('0.1.1')
+    lis[4].should have_link('1.0.0')
+    lis[5].should have_link('1.0.1')
   end
 
   it "displays the most recent version" do
