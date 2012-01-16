@@ -15,6 +15,9 @@ ul.versions
 
 h3 View Range
 = form_tag('#', class: :range_form) do
-  = select_tag :start_version, options_for_select(@versions[0..-2].collect { |v| [v.number, v.id] }, @current_version.id)
-  = select_tag :end_version, options_for_select(@versions[1..-1].collect { |v| [v.number, v.id] }, @current_version.id)
+  = label_tag :start_version
+  = select_tag :start_id, options_from_collection_for_select(@versions[0..-2], :id, :number, @versions[0].id), id: :start_version
+
+  = label_tag :end_version
+  = select_tag :end_id, options_from_collection_for_select(@versions[1..-1], :id, :number, @current_version.id), id: :end_version
   = submit_tag 'View'
