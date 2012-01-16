@@ -1,0 +1,5 @@
+h2 #{@gem.name} v#{@version.number}
+
+ul.changes
+  - @version.changes.each do |change|
+    li= change
