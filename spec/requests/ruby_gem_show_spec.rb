@@ -26,8 +26,19 @@ describe "Visiting a gem's page" do
     find('.current_version').should have_content('1.0.1')
   end
 
-  it "displays the changes for the most recent major version number" do
-    find('.current_version .changes').should have_content("Fixed bug involving calling NoneSuch::Portal.new when already within another portal's execution block.")
+  it "displays the all changes for the most recent major version number" do
+    current_version_lis = all('ul.major_version>li').to_enum
+
+    version_li = current_version_lis.next
+    version_li.should have_content('1.0.1')
+    changes_lis = version_li.all('ul.changes>li').to_enum
+    changes_lis.next.should have_content("Fixed bug involving calling NoneSuch::Portal.new when already within another portal's execution block.")
+
+    version_li = current_version_lis.next
+    version_li.should have_content('1.0.0')
+    changes_lis = version_li.all('ul.changes>li').to_enum
+    changes_lis.next.should have_content('Solidified API.')
+    changes_lis.next.should have_content('Reduced entropy caused by calling NoneSuch::Collider.collide!')
   end
 
   it "has a form for seeing all the changes between two versions" do

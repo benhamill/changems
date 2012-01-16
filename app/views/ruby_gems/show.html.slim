@@ -2,9 +2,13 @@ h2= @gem.name
 
 .current_version
   h3 Current Version: #{@current_version.number}
-  ul.changes
-    - @current_version.changes.each do |change|
-      li= change
+  ul.major_version
+    - @current_major_versions.each do |version|
+      li
+        h4= version.number
+        ul.changes
+          - version.changes.each do |change|
+            li= change
 
 h3 Versions
 ul.versions
