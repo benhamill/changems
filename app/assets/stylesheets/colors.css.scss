@@ -15,6 +15,17 @@ header {
 
 #main {
   background-color: $background;
+
+  .flash {
+    background-color: $white;
+    color: $black;
+    font-weight: bold;
+
+    &#alert {
+      background-color: $ruby;
+      color: $white;
+    }
+  }
 }
 
 a, a:visited {

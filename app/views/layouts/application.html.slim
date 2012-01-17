@@ -23,9 +23,11 @@ html
     section#main.container_12
       section#notifications.grid_10.push_1
         - if notice
-          p.flash#notice = notice
+          .flash#notice
+            p= notice
         - if alert
-          p.flash#alert = alert
+          .flash#alert
+            p= alert
 
       section.grid_12
         = yield
