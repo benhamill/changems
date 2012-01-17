@@ -1,0 +1,24 @@
+@import url(http://fonts.googleapis.com/css?family=IM+Fell+French+Canon:400,400italic|Chango);
+// font-family: 'IM Fell French Canon';
+// font-family: 'Chango';
+
+body {
+  font-family: 'IM Fell French Canon', serif;
+}
+
+header h1{
+  a { text-decoration: none; }
+
+  .change {
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+  }
+
+  .ms {
+    font-family: 'Chango', sans-serif;
+  }
+}
+
+h2 {
+  font-family: 'Chango', sans-serif;
+}

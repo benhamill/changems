@@ -6,22 +6,37 @@ html
     = javascript_include_tag 'application'
     = csrf_meta_tags
   body
-    header
-      h1= link_to "Changems", root_url
+    header.container_12
+      h1.grid_8
+        a href=root_url
+          span.change
+            span.chan Chan
+            span.gems ge
+          span.gems.ms ms
 
-      = form_tag(root_path) do
+      = form_tag(root_path, method: :get, class: :grid_4) do
         = text_field_tag :search
         = submit_tag 'Search'
 
-    section#main
-      section#notifications
+      .clear
+
+    section#main.container_12
+      section#notifications.grid_10.push_1
         - if notice
           p.flash#notice = notice
         - if alert
           p.flash#alert = alert
 
-      section
+      section.grid_12
         = yield
 
-    footer
-        p Probably some links some day.
+      .clear
+
+    footer.container_12
+      .grid_12
+        p
+          ' Help make this site awesomer with
+          = link_to 'Github', 'http://github.com/benhamill/changems/'
+          | .
+
+      .clear

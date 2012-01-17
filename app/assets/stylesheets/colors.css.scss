@@ -1,0 +1,23 @@
+$black: #111;
+$white: #ffd;
+$background: #333;
+$ruby: #d22;
+
+body {
+  background-color: $black;
+  color: $white;
+}
+
+header {
+  .chan { color: $white; }
+  .gems { color: $ruby; }
+}
+
+#main {
+  background-color: $background;
+}
+
+a, a:visited {
+  color: $ruby;
+  font-weight: bold;
+}

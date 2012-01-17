@@ -1,0 +1,18 @@
+body { padding: 0; margin: 0; }
+
+header {
+  padding: 30px inherit;
+
+  h1 {
+    .change { font-size: 48px; }
+    .ms {
+      font-size: 48px;
+      padding-left: 2px;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 10px inherit;
+}
