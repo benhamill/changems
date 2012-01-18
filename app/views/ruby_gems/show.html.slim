@@ -15,7 +15,7 @@
   h3 Versions
   ul.versions
     - @versions.each do |version|
-      li= link_to version.number, version_url(version)
+      li= version.number
 
   h3 View Range
   = form_tag(range_versions_url, class: :range_form, method: :get) do

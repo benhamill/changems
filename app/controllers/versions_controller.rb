@@ -1,9 +1,4 @@
 class VersionsController < ApplicationController
-  def show
-    @version = VersionDecorator.find(params[:id])
-    @gem = @version.ruby_gem
-  end
-
   def range
     @start_version = Version.find(params[:start_id])
     @end_version = Version.find(params[:end_id])

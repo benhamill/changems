@@ -1,6 +1,6 @@
 Changems::Application.routes.draw do
   resources :ruby_gems, only: [:index, :show]
-  resources :versions, only: [:show] do
+  resources :versions, only: [] do
     collection { get :range }
   end
 
