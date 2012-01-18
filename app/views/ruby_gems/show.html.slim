@@ -16,16 +16,3 @@
   ul.versions
     - @versions.each do |version|
       li= version.number
-
-  h3 View Range
-  = form_tag(range_versions_url, class: :range_form, method: :get) do
-    .form_line
-      = label_tag :start_version
-      = select_tag :start_id, options_from_collection_for_select(@versions[0..-2], :id, :number, @versions[0].id), id: :start_version
-
-    .form_line
-      = label_tag :end_version
-      = select_tag :end_id, options_from_collection_for_select(@versions[1..-1], :id, :number, @current_version.id), id: :end_version
-
-    .form_line
-      = submit_tag 'View Range'

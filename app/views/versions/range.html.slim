@@ -1,9 +1,0 @@
-h2 #{@gem.name} versions #{@start_version.number} - #{@end_version.number}
-
-ul.versions
-  - @versions.each do |version|
-    li
-      h3= version.number
-      ul.changes
-        - version.changes.each do |change|
-          li= change

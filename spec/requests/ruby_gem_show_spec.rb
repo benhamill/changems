@@ -40,9 +40,4 @@ describe "Visiting a gem's page" do
     changes_lis.next.should have_content('Solidified API.')
     changes_lis.next.should have_content('Reduced entropy caused by calling NoneSuch::Collider.collide!')
   end
-
-  it "has a form for seeing all the changes between two versions" do
-    find('.range_form').should have_select('start_version', options: %w(0.0.1 0.0.2 0.1.0 0.1.1 1.0.0))
-    find('.range_form').should have_select('end_version', options: %w(0.0.2 0.1.0 0.1.1 1.0.0 1.0.1))
-  end
 end
