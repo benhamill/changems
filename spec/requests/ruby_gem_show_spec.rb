@@ -11,6 +11,10 @@ describe "Visiting a gem's page" do
     page.should have_content('none_such')
   end
 
+  it "displays the most recent version" do
+    page.should have_content('1.0.1')
+  end
+
   it "lists the known versions" do
     lis = find('.versions').all('li').to_enum
 
@@ -20,10 +24,6 @@ describe "Visiting a gem's page" do
     lis.next.should have_link('0.1.0', href: "#0_1_0")
     lis.next.should have_link('0.0.2', href: "#0_0_2")
     lis.next.should have_link('0.0.1', href: "#0_0_1")
-  end
-
-  it "displays the most recent version" do
-    find('.current_version').should have_content('1.0.1')
   end
 
   it "displays the all changes for the gem, most recent first" do

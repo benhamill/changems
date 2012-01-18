@@ -1,7 +1,5 @@
 .alpha.grid_8#center
-  h2
-    = @gem.name
-    span.current_version= @current_version.number
+  h2 #{@gem.name} #{@current_version.number}
 
   h3 Changes
   ul.all_versions
