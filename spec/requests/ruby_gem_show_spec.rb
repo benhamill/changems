@@ -12,15 +12,14 @@ describe "Visiting a gem's page" do
   end
 
   it "lists the known versions" do
-    pending("These should be links to the current page's set of related changes.")
     lis = find('.versions').all('li')
 
-    lis[0].should have_content('0.0.1')
-    lis[1].should have_content('0.0.2')
-    lis[2].should have_content('0.1.0')
-    lis[3].should have_content('0.1.1')
-    lis[4].should have_content('1.0.0')
-    lis[5].should have_content('1.0.1')
+    lis[0].should have_link('0.0.1', href: '#v0_0_1')
+    lis[1].should have_link('0.0.2', href: '#v0_0_2')
+    lis[2].should have_link('0.1.0', href: '#v0_1_0')
+    lis[3].should have_link('0.1.1', href: '#v0_1_1')
+    lis[4].should have_link('1.0.0', href: '#v1_0_0')
+    lis[5].should have_link('1.0.1', href: '#v1_0_1')
   end
 
   it "displays the most recent version" do
