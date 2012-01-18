@@ -12,14 +12,14 @@ describe "Visiting a gem's page" do
   end
 
   it "lists the known versions" do
-    lis = find('.versions').all('li')
+    lis = find('.versions').all('li').to_enum
 
-    lis[0].should have_link('0.0.1', href: '#v0_0_1')
-    lis[1].should have_link('0.0.2', href: '#v0_0_2')
-    lis[2].should have_link('0.1.0', href: '#v0_1_0')
-    lis[3].should have_link('0.1.1', href: '#v0_1_1')
-    lis[4].should have_link('1.0.0', href: '#v1_0_0')
-    lis[5].should have_link('1.0.1', href: '#v1_0_1')
+    lis.next.should have_link('1.0.1', href: "#1_0_1")
+    lis.next.should have_link('1.0.0', href: "#1_0_0")
+    lis.next.should have_link('0.1.1', href: "#0_1_1")
+    lis.next.should have_link('0.1.0', href: "#0_1_0")
+    lis.next.should have_link('0.0.2', href: "#0_0_2")
+    lis.next.should have_link('0.0.1', href: "#0_0_1")
   end
 
   it "displays the most recent version" do
@@ -27,7 +27,7 @@ describe "Visiting a gem's page" do
   end
 
   it "displays the all changes for the gem, most recent first" do
-    current_version_lis = all('ul.versions>li').to_enum
+    current_version_lis = all('ul.all_versions>li').to_enum
 
     version_li = current_version_lis.next
     version_li.should have_content('1.0.1')

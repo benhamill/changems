@@ -1,18 +1,19 @@
 .alpha.grid_8#center
-  h2= @gem.name
+  h2
+    = @gem.name
+    span.current_version= @current_version.number
 
-  .current_version
-    h3 Current Version: #{@current_version.number}
-    ul.major_version
-      - @current_major_versions.each do |version|
-        li
-          h4= version.number
-          ul.changes
-            - version.changes.each do |change|
-              li= change
+  h3 Changes
+  ul.all_versions
+    - @versions.each do |version|
+      li
+        h4 id=version.link_string = version.number
+        ul.changes
+          - version.changes.each do |change|
+            li= change
 
 .omega.grid_4#side
   h3 Versions
   ul.versions
     - @versions.each do |version|
-      li= version.number
+      li= link_to version.number, "##{version.link_string}"
