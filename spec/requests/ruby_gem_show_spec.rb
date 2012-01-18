@@ -12,6 +12,7 @@ describe "Visiting a gem's page" do
   end
 
   it "lists the known versions" do
+    pending("These should be links to the current page's set of related changes.")
     lis = find('.versions').all('li')
 
     lis[0].should have_content('0.0.1')
