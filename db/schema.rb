@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(:version => 20120119035932) do
     t.integer  "ruby_gem_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "major",       :default => 0
-    t.integer  "minor",       :default => 0
-    t.integer  "patch",       :default => 0
+    t.integer  "major",         :default => 0
+    t.integer  "minor",         :default => 0
+    t.integer  "patch",         :default => 0
     t.string   "prerelease"
-    t.text     "changes",                    :null => false
+    t.text     "release_notes",                :null => false
   end
 
   add_index "versions", ["major", "minor", "patch", "prerelease"], :name => "index_versions_on_major_and_minor_and_patch_and_special"

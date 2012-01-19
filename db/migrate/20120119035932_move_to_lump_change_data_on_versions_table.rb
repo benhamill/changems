@@ -3,7 +3,7 @@ class MoveToLumpChangeDataOnVersionsTable < ActiveRecord::Migration
     drop_table :changes
 
     change_table :versions do |t|
-      t.text :changes, :null => false
+      t.text :release_notes, :null => false
     end
   end
 end
