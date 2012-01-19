@@ -1,6 +1,5 @@
 class Version < ActiveRecord::Base
   belongs_to :ruby_gem
-  has_many :changes
 
   before_save :split_out_version_number
 
