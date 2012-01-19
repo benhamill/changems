@@ -6,9 +6,7 @@
     - @versions.each do |version|
       li
         h4 id=version.link_string = version.number
-        ul.changes
-          - version.changes.each do |change|
-            li= change
+        p.changes= version.release_notes
 
 .omega.grid_4#side
   h3 Versions
