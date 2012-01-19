@@ -57,4 +57,7 @@ describe "Visiting a gem's page" do
     version_li.should have_content('0.0.1')
     version_li.find('.changes').should have_content('Initial release.')
   end
+
+  it "renders plaintext release notes as preformatted"
+  it "renders markdown"
 end
