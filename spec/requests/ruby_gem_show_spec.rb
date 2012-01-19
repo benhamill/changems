@@ -58,6 +58,12 @@ describe "Visiting a gem's page" do
     version_li.find('.changes').should have_content('Initial release.')
   end
 
-  it "renders plaintext release notes as preformatted"
+  it "renders plaintext release notes as preformatted" do
+    find('#0_0_2 .changes pre').should have_content(<<-CONTENT)
+* Fix bug in NoneSuch::Portal which increased a programmer's chance of contracting rabies.
+* Updated README.
+CONTENT
+  end
+
   it "renders markdown"
 end
