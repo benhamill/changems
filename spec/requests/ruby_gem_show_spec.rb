@@ -59,7 +59,7 @@ describe "Visiting a gem's page" do
   end
 
   it "renders plaintext release notes as preformatted" do
-    find('#0_0_2 .changes pre').should have_content(<<-CONTENT)
+    find('#0_0_2 .changes pre').text.should == <<-CONTENT
 * Fix bug in NoneSuch::Portal which increased a programmer's chance of contracting rabies.
 * Updated README.
 CONTENT
