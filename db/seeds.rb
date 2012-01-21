@@ -7,9 +7,9 @@ CHANGES
 * Added direct access to NoneSuch::Collider.
 CHANGES
 
-  gem.versions.build(number: '0.1.1', release_notes: <<-CHANGES, file_extention: 'txt')
+  gem.versions.build(number: '0.1.1', release_notes: <<-CHANGES, file_extention: 'md')
 * Update contributers in gemspec.
-* Fixed a bug where a NoneSuch::Portal would forget where it was anchored and destroy permanently anything that passed through.
+* Fixed a bug where a `NoneSuch::Portal` would forget where it was anchored and destroy permanently anything that passed through.
 * Fixed a divide-by-zero bug.
 CHANGES
 

@@ -12,6 +12,10 @@ class VersionDecorator < ApplicationDecorator
   private
 
   def render_release_notes
-    "<pre>#{version.release_notes}</pre>"
+    if version.file_extention =~ /md|mkdn?|mdown|markdown/
+      Redcarpet::Markdown.new(Redcarpet::Render::HTML.new).render(version.release_notes)
+    else # Assume plaintext
+      "<pre>#{version.release_notes}</pre>"
+    end
   end
 end

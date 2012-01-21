@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'slim'
 gem 'draper'
 gem 'texticle', require: 'texticle/rails'
+gem 'redcarpet'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.5'
@@ -16,7 +17,7 @@ group :assets do
 end
 
 group :test, :development do
-  gem 'pry'
+  gem 'pry-rails'
   gem 'pry-doc'
   gem 'heroku'
   gem 'rspec-rails'

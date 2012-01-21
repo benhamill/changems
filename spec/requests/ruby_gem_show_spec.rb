@@ -65,5 +65,17 @@ describe "Visiting a gem's page" do
 CONTENT
   end
 
-  it "renders markdown"
+  it "renders markdown" do
+    note_lis = find('#0_1_1 .changes ul').all('li').to_enum
+
+    note_li = note_lis.next
+    note_li.should have_content('Update contributers in gemspec.')
+
+    note_li = note_lis.next
+    note_li.should have_content('Fixed a bug where a NoneSuch::Portal would forget where it was anchored and destroy permanently anything that passed through.')
+    note_li.find('code').should have_content('NoneSuch::Portal')
+
+    note_li = note_lis.next
+    note_li.should have_content('Fixed a divide-by-zero bug.')
+  end
 end
