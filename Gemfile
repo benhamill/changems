@@ -9,6 +9,7 @@ gem 'slim'
 gem 'draper'
 gem 'texticle', require: 'texticle/rails'
 gem 'redcarpet'
+gem 'gems'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
