@@ -12,6 +12,7 @@ Some ideas for features I'll be working towards. I'm open to other ideas. In no 
 - API end point to get the changes between 2 arbitrary releases
 - A design that looks good
 - Something intereting on the home page
+- A way to import release notes from a gem
 
 ## Getting Started With The Project
 
