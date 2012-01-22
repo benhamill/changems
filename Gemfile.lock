@@ -202,4 +202,5 @@ DEPENDENCIES
   slim
   texticle
   thin
+  treetop
   uglifier (>= 1.0.3)

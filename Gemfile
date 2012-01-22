@@ -10,6 +10,7 @@ gem 'draper'
 gem 'texticle', require: 'texticle/rails'
 gem 'redcarpet'
 gem 'gems'
+gem 'treetop'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
