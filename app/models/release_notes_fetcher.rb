@@ -1,5 +1,5 @@
 class ReleaseNotesFetcher
-  RELEASE_NOTES_REGEXP = /^changelog|^history/i
+  RELEASE_NOTES_REGEXP = /^changelog|^changes|^history/i
 
   def self.fetch(gem_name)
     raw_gem = fetch_raw_gem(gem_name)
