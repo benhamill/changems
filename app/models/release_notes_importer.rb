@@ -2,11 +2,11 @@ module ReleaseNotesImporter
   def self.import(gem_name)
     release_notes, file_name = ReleaseNotesFetcher.fetch(gem_name)
 
-    file_extension = rip_extension_off(file_name)
+    file_extension = FileExtension.from_file_name(file_name)
 
     versions = pull_apart_release_notes(release_notes, file_extension)
 
-    create_needed_versions(versions, file_extension, gem_name)
+    create_needed_versions(versions, file_extension.to_s, gem_name)
   end
 
   private
@@ -15,7 +15,7 @@ module ReleaseNotesImporter
     # TODO: Parse the file and return a has like { '0.0.1' => "..." }
   end
 
-  def self.create_needed_versions(versions, file_name, gem_name)
+  def self.create_needed_versions(versions, file_extension, gem_name)
     gem = RubyGem.where(name: gem_name).first
     latest_known_version = Gem::Version.new(gem.current_version.number)
 
@@ -28,10 +28,5 @@ module ReleaseNotesImporter
         file_extension: file_extension
       )
     end
-  end
-
-  def self.rip_extension_off(file_name)
-    return unless file_name =~ /\./
-    extension = file_name.split('.').last
   end
 end
