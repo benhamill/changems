@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120119231817) do
+ActiveRecord::Schema.define(:version => 20120122042809) do
 
   create_table "ruby_gems", :force => true do |t|
     t.string   "name"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20120119231817) do
     t.integer  "patch",          :default => 0
     t.string   "prerelease"
     t.text     "release_notes",                  :null => false
-    t.text     "file_extention", :default => ""
+    t.text     "file_extension", :default => ""
   end
 
   add_index "versions", ["major", "minor", "patch", "prerelease"], :name => "index_versions_on_major_and_minor_and_patch_and_special"

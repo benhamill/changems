@@ -20,13 +20,13 @@ class ReleaseNotesImporter
     versions.each do |version_number, release_notes|
       next if Gem::Version.new(version_number) <= latest_known_version
 
-      extention = file_name.rpartition('.').last
-      extention = nil if extention == file_name.partition('.').first
+      extension = file_name.rpartition('.').last
+      extension = nil if extension == file_name.partition('.').first
 
       gem.versions.create(
         number: version_number,
         release_notes: release_notes,
-        file_extention: extention
+        file_extension: extension
       )
     end
   end
