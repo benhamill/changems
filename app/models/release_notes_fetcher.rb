@@ -1,4 +1,4 @@
-class ReleaseNotesFetcher
+module ReleaseNotesFetcher
   RELEASE_NOTES_REGEXP = /^changelog|^changes|^history/i
 
   def self.fetch(gem_name)

@@ -1,4 +1,4 @@
-class ReleaseNotesImporter
+module ReleaseNotesImporter
   def self.import(gem_name)
     release_notes, file_name = ReleaseNotesFetcher.fetch(gem_name)
 
