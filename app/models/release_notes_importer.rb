@@ -18,7 +18,7 @@ class ReleaseNotesImporter
     latest_known_version = Gem::Version.new(gem.current_version.number)
 
     versions.each do |version_number, release_notes|
-      next if Gem::Version.new(version_number) <= latest_known_version
+      return if Gem::Version.new(version_number) <= latest_known_version
 
       extension = file_name.rpartition('.').last
       extension = nil if extension == file_name.partition('.').first
