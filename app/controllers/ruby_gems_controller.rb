@@ -10,7 +10,6 @@ class RubyGemsController < ApplicationController
 
   def show
     @gem = RubyGem.find(params[:id])
-    @current_version = @gem.current_version
     @versions = VersionDecorator.decorate(@gem.versions.semantic_order('desc'))
   end
 end

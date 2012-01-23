@@ -13,7 +13,7 @@ module ReleaseNotesImporter
 
   def self.create_needed_versions(versions, file_extension, gem_name)
     gem = RubyGem.where(name: gem_name).first
-    latest_known_version = Gem::Version.new(gem.current_version.number)
+    latest_known_version = Gem::Version.new(gem.current_version_number)
 
     versions.each do |version_number, release_notes|
       return if Gem::Version.new(version_number) <= latest_known_version
