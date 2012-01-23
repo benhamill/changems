@@ -16,6 +16,8 @@ module ReleaseNotesImporter
     latest_known_version = Gem::Version.new(gem.current_version_number)
 
     versions.each do |version_number, release_notes|
+      version_number = version_number.dup # In case it's frozen
+
       return if Gem::Version.new(version_number) <= latest_known_version
 
       gem.versions.create(
