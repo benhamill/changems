@@ -5,7 +5,7 @@
 
     *Jon Leighton*
 
-*   Fix bug with referencing other mysql databases in set_table_name. *GH 3690*
+*   Fix bug with referencing other mysql databases in set_table_name. *GH ##3690*
 
 *   Fix performance bug with mysql databases on a server with lots of other databses. *GH 3678*
 

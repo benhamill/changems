@@ -23,7 +23,11 @@ module ReleaseNotesParser
     class Releases < Treetop::Runtime::SyntaxNode
       def to_hash
         elements.inject({}) do |memo, release|
-          memo[release.release_line.version_number.text_value] = release.release_note.text_value
+          version_number = release.release_line.release_description.version_number.text_value
+          release_notes = release.release_note.text_value
+
+          memo[version_number] = release_notes
+
           memo
         end
       end

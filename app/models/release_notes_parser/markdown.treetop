@@ -17,7 +17,11 @@ module ReleaseNotesParser
     end
 
     rule release_line
-      '##' non_version_number_stuff* version_number almost_anything* &newline
+      release_description &newline
+    end
+
+    rule release_description
+      '##' non_version_number_stuff* version_number almost_anything*
     end
 
     rule non_version_number_stuff
@@ -37,11 +41,11 @@ module ReleaseNotesParser
     end
 
     rule line_of_text
-      anything_but_a_version_line+ &newline
+      anything_but_a_version_line &newline
     end
 
     rule anything_but_a_version_line
-      !('##' non_version_number_stuff* version_number almost_anything*) almost_anything
+      !release_description almost_anything+
     end
 
     rule almost_anything
