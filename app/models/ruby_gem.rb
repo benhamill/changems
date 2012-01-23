@@ -1,6 +1,10 @@
 class RubyGem < ActiveRecord::Base
   has_many :versions
 
+  def self.featured
+    self.where(featured: true)
+  end
+
   def current_version_number
     v = versions.semantic_order('desc').limit(1).first
 

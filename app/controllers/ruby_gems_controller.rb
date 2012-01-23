@@ -5,7 +5,7 @@ class RubyGemsController < ApplicationController
       render :search_results and return
     end
 
-    @featured_gems = RubyGem.where(name: 'none_such')
+    @featured_gems = RubyGem.featured
   end
 
   def show

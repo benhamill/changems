@@ -1,4 +1,4 @@
-RubyGem.create(name: 'none_such') do |gem|
+RubyGem.create(name: 'none_such', featured: true) do |gem|
   gem.versions.build(number: '0.0.1', release_notes: <<-CHANGES, file_extension: 'txt')
 * Initial release.
 CHANGES

@@ -11,13 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120122042809) do
+ActiveRecord::Schema.define(:version => 20120123065041) do
 
   create_table "ruby_gems", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "featured",   :default => false
   end
+
+  add_index "ruby_gems", ["featured"], :name => "index_ruby_gems_on_featured"
 
   create_table "versions", :force => true do |t|
     t.string   "number"
