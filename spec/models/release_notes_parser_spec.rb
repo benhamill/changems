@@ -3,6 +3,7 @@ require 'spec_helper'
 describe ReleaseNotesParser do
   describe "::Markdown" do
     let(:markdown_release_notes) { File.read("#{Rails.root}/spec/support/markdown.md") }
+
     subject { ReleaseNotesParser::Markdown.parse(markdown_release_notes) }
 
     it "pulls version numbers from H2s" do
@@ -21,6 +22,7 @@ describe ReleaseNotesParser do
 *   Fix performance bug with mysql databases on a server with lots of other databses. *GH 3678*
 
     *Christos Zisopoulos and Kenny J*
+
 NOTES
     end
   end

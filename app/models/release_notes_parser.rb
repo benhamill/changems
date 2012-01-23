@@ -16,9 +16,4 @@ module ReleaseNotesParser
       raise ReleaseNotesParser::UnknownFileTypeError, "Cannot parse files of type #{file_extension.to_s.inspect}"
     end
   end
-
-  module Markdown
-    def self.parse(release_notes)
-    end
-  end
 end

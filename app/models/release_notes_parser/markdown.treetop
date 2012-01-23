@@ -1,0 +1,55 @@
+module ReleaseNotesParser
+  grammar Markdown
+    rule notes
+      kruft? releases <Notes>
+    end
+
+    rule releases
+      release+ <Releases>
+    end
+
+    rule kruft
+      (line_of_text newline+)+
+    end
+
+    rule release
+      release_line newline+ release_note
+    end
+
+    rule release_line
+      '##' non_version_number_stuff* version_number almost_anything* &newline
+    end
+
+    rule non_version_number_stuff
+      (!version_number almost_anything)
+    end
+
+    rule version_number
+      [0-9]+ ('.' letters_or_numbers+)*
+    end
+
+    rule letters_or_numbers
+      [a-zA-Z0-9]
+    end
+
+    rule release_note
+      (line_of_text newline+)+
+    end
+
+    rule line_of_text
+      anything_but_a_version_line+ &newline
+    end
+
+    rule anything_but_a_version_line
+      !('##' non_version_number_stuff* version_number almost_anything*) almost_anything
+    end
+
+    rule almost_anything
+      [^\n]
+    end
+
+    rule newline
+      [\n]
+    end
+  end
+end
