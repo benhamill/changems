@@ -10,7 +10,7 @@ describe "Visiting the homepage" do
       page.should have_content("Welcome")
     end
 
-    it "lists some featured gems", focus: true do
+    it "lists some featured gems" do
       find('.featured_gems').should have_content('none_such')
     end
   end
