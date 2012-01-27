@@ -12,13 +12,12 @@ Some ideas for features I'll be working towards. I'm open to other ideas. In no 
 - API end point to get the changes between 2 arbitrary releases
 - A design that looks good
 - Something intereting on the home page
-- A way to import release notes from a gem
 
 ## Getting Started With The Project
 
 ### 0. Ruby Version
 
-Changems is designed to run on Ruby **1.9.2**.
+Changems is designed to run on Ruby **1.9.2** and RubyGems **1.8.15**. That latter is why rubygems is vendored; so I can make Heroku load that instead of the older version they're using.
 
 ### 1. Setup
 
