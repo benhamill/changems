@@ -1,0 +1,64 @@
+module ReleaseNotesParser
+
+  # This is intended to be a parent-parser, as it were, for markups that ultimately render down to HTML.
+  # In order to write a grammar that includes this, define a rule called release_marker that knows what
+  # the start of a line that describes a release section should look like (generally the markup's H2
+  # symbol). Look at the Markdown grammar for an example.
+  grammar Markup
+    rule notes
+      kruft? releases <Notes>
+    end
+
+    rule releases
+      release+ <Releases>
+    end
+
+    rule kruft
+      (line_of_text newline+)+
+    end
+
+    rule release
+      release_line newline+ release_note
+    end
+
+    rule release_line
+      release_description &newline
+    end
+
+    rule release_description
+      release_marker non_version_number_stuff* version_number almost_anything*
+    end
+
+    rule non_version_number_stuff
+      (!version_number almost_anything)
+    end
+
+    rule version_number
+      [0-9]+ ('.' letters_or_numbers+)*
+    end
+
+    rule letters_or_numbers
+      [a-zA-Z0-9]
+    end
+
+    rule release_note
+      (line_of_text newline+)+
+    end
+
+    rule line_of_text
+      anything_but_a_version_line &newline
+    end
+
+    rule anything_but_a_version_line
+      !release_description almost_anything+
+    end
+
+    rule almost_anything
+      [^\n]
+    end
+
+    rule newline
+      [\n]
+    end
+  end
+end

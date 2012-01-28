@@ -27,7 +27,7 @@ NOTES
     end
   end
 
-  describe "::RDoc", focus: true do
+  describe "::RDoc" do
     let(:rdoc_release_notes) { File.read(Rails.root.join(*%w(spec support rdoc.rdoc))) }
 
     subject { ReleaseNotesParser::RDoc.parse(rdoc_release_notes) }

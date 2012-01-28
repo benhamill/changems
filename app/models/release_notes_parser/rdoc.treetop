@@ -1,9 +1,9 @@
 module ReleaseNotesParser
-  grammar Markdown
+  grammar RDoc
     include Markup
 
     rule release_marker
-      '##'
+      '=='
     end
   end
 end
