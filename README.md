@@ -12,6 +12,7 @@ Some ideas for features I'll be working towards. I'm open to other ideas. In no 
 - API end point to get the changes between 2 arbitrary releases
 - A design that looks good
 - Something intereting on the home page
+- Make the version number regexp in the parser smarter and able to find "... 1.2.3 beta1 ..." even though space is not strictly allowed in a version number.
 
 ## Getting Started With The Project
 
