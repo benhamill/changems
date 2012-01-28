@@ -3,18 +3,21 @@ RubyGem.create(name: 'none_such', featured: true) do |gem|
 * Initial release.
 CHANGES
 
-  gem.versions.build(number: '0.1.0', release_notes: <<-CHANGES, file_extension: 'txt')
-* Added direct access to NoneSuch::Collider.
+  # RDoc test example.
+  gem.versions.build(number: '0.1.0', release_notes: <<-CHANGES, file_extension: 'rdoc')
+* Added direct access to <tt>NoneSuch::Collider</tt>.
 CHANGES
 
+  # Markdown test example.
   gem.versions.build(number: '0.1.1', release_notes: <<-CHANGES, file_extension: 'md')
 * Update contributers in gemspec.
 * Fixed a bug where a `NoneSuch::Portal` would forget where it was anchored and destroy permanently anything that passed through.
 * Fixed a divide-by-zero bug.
 CHANGES
 
-  gem.versions.build(number: '0.0.2', release_notes: <<-CHANGES, file_extension: 'rdoc')
-* Fix bug in +NoneSuch::Portal+ which increased a programmer's chance of contracting rabies.
+  # Plaintext test example.
+  gem.versions.build(number: '0.0.2', release_notes: <<-CHANGES, file_extension: 'txt')
+* Fix bug in NoneSuch::Portal which increased a programmer's chance of contracting rabies.
 * Updated README.
 CHANGES
 
