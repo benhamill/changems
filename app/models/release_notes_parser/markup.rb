@@ -7,7 +7,6 @@ module ReleaseNotesParser
       tree = parser.parse(release_notes)
 
       if tree.nil?
-        binding.pry
         raise "Error parsing #{self.name} at #{parser.index}."
       end
 
