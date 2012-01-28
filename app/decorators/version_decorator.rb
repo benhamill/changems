@@ -1,5 +1,3 @@
-# require 'rdoc/markup/html'
-
 class VersionDecorator < ApplicationDecorator
   decorates :version
 
