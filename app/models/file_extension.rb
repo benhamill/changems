@@ -15,6 +15,10 @@ class FileExtension
     @file_extension =~ /^(md|mkdn?|mdown|markdown)$/
   end
 
+  def rdoc?
+    @file_extension =~ /^rdoc$/
+  end
+
   def plaintext?
     @file_extension =~ /^(txt|)$/
   end
