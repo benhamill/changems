@@ -13,8 +13,8 @@ CHANGES
 * Fixed a divide-by-zero bug.
 CHANGES
 
-  gem.versions.build(number: '0.0.2', release_notes: <<-CHANGES, file_extension: 'txt')
-* Fix bug in NoneSuch::Portal which increased a programmer's chance of contracting rabies.
+  gem.versions.build(number: '0.0.2', release_notes: <<-CHANGES, file_extension: 'rdoc')
+* Fix bug in +NoneSuch::Portal+ which increased a programmer's chance of contracting rabies.
 * Updated README.
 CHANGES
 

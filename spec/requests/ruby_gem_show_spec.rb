@@ -78,4 +78,15 @@ CONTENT
     note_li = note_lis.next
     note_li.should have_content('Fixed a divide-by-zero bug.')
   end
+
+  it "renders rdoc" do
+    note_lis = find('#0_0_2 .changes ul').all('li').to_enum
+
+    note_li = note_lis.next
+    note_li.find('p').should have_content("Fix bug in NoneSuch::Portal which increased a programmer's chance of contracting rabies.")
+    note_li.find('p code').should have_content("NoneSuch::Portal")
+
+    note_li = note_lis.next
+    note_li.find('p').should have_content("Updated README.")
+  end
 end
