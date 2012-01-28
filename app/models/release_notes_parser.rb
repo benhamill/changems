@@ -13,7 +13,7 @@ module ReleaseNotesParser
     if file_extension.markdown?
       ReleaseNotesParser::Markdown
     elsif file_extension.rdoc?
-      ReleaseNotesParser::RDoc
+      ReleaseNotesParser::Rdoc
     else
       raise ReleaseNotesParser::UnknownFileTypeError, "Cannot parse files of type #{file_extension.to_s.inspect}"
     end

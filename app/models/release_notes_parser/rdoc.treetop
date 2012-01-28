@@ -1,5 +1,5 @@
 module ReleaseNotesParser
-  grammar RDoc
+  grammar Rdoc
     include Markup
 
     rule release_marker

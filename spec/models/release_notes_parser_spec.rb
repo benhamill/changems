@@ -27,10 +27,10 @@ NOTES
     end
   end
 
-  describe "::RDoc" do
+  describe "::Rdoc" do
     let(:rdoc_release_notes) { File.read(Rails.root.join(*%w(spec support rdoc.rdoc))) }
 
-    subject { ReleaseNotesParser::RDoc.parse(rdoc_release_notes) }
+    subject { ReleaseNotesParser::Rdoc.parse(rdoc_release_notes) }
 
     it "pulls version numbers from H2s" do
       subject.keys.sort.should == %w(1.5.1 1.5.0 1.4.7 1.4.6 1.4.5).sort
