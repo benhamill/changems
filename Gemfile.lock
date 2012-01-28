@@ -191,6 +191,7 @@ DEPENDENCIES
   pry-doc
   pry-rails
   rails (~> 3.1)
+  rdoc
   redcarpet
   rspec-rails
   sass-rails (~> 3.2.3)
