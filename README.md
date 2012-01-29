@@ -16,6 +16,7 @@ Some ideas for features I'll be working towards. I'm open to other ideas. In no 
 - Some kind of auto-import for gems the app doesn't know about.
 - Some kind of check-for-updates for gems the app *does* know about.
 - Prettier URLs.
+- Improve search.
 
 ## Release Notes Parsing
 
