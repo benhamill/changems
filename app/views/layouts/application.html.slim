@@ -15,7 +15,7 @@ html
           span.gems.ms ms
 
       = form_tag(root_path, method: :get, class: :grid_4) do
-        = text_field_tag :search
+        = search_field_tag :search, params[:search], placeholder: 'Type a gem name'
         = submit_tag 'Search'
 
       .clear
