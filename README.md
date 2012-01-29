@@ -8,10 +8,10 @@ I envision an app that tracks entries that gem authors put in their change log a
 
 Some ideas for features I'll be working towards. I'm open to other ideas. In no particular order:
 
-- API end point to get the changes in a given release
-- API end point to get the changes between 2 arbitrary releases
-- A design that looks good
-- Something intereting on the home page
+- API end point to get the changes in a given release.
+- API end point to get the changes between 2 arbitrary releases.
+- A design that looks good.
+- Something intereting on the home page.
 - Make the version number regexp in the parser smarter and able to find "... 1.2.3 beta1 ..." even though space is not strictly allowed in a version number.
 - Some kind of auto-import for gems the app doesn't know about.
 - Some kind of check-for-updates for gems the app *does* know about.
