@@ -35,4 +35,28 @@ module ReleaseNotesFetcher
     return Gem.gunzip(entry.read) if entry.full_name =~ /\.gz$/
     entry.read
   end
+
+
+  # Below code mimics the API from rubygems 1.8.15. When we can deploy to a place with
+  # that version of rubygems, we can pull this out and use the real stuff. This does a
+  # lot less than what rubygems does, but it'll do for now.
+
+  module Gem
+    class RemoteFetcher
+      def fetch_http(uri, depth = 0)
+        response = Net::HTTP.get_response(uri)
+
+        case response
+        when Net::HTTPOK, Net::HTTPNotModified
+          response.body
+        when Net::HTTPMovedPermanently, Net::HTTPFound, Net::HTTPSeeOther, Net::HTTPTemporaryRedirect
+          raise "Too many retries for #{uri.inspect}." if depth > 10
+
+          fetch_http(URI.parse(response['Location']), depth + 1)
+        else
+          raise "Bad response from #{usi.inspect}: #{reponse.message} #{response.code}"
+        end
+      end
+    end
+  end
 end
