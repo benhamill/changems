@@ -13,6 +13,20 @@ Some ideas for features I'll be working towards. I'm open to other ideas. In no 
 - A design that looks good
 - Something intereting on the home page
 - Make the version number regexp in the parser smarter and able to find "... 1.2.3 beta1 ..." even though space is not strictly allowed in a version number.
+- Some kind of auto-import for gems the app doesn't know about.
+- Some kind of check-for-updates for gems the app *does* know about.
+
+## Release Notes Parsing
+
+In general, my idea is that release notes in markups like Markdown and RDoc--ones that have a defined method to render them into HTML--should adhere to these guideslines. I looked at a few high profile gems to come up with these, but I'm willing to entertain discussion on their worthiness.
+
+1. The release notes MAY have whatever it wants as preamble.
+2. The release notes MUST be divided into sections describing a release with each section headed by a level 2 header (H2 tag?) followed by the release's notes.
+3. The header for a release MUST include the version number and it should be valid according to `Gem::Version.new`.
+4. The notes for a particular release MUST be in whatever format the author wishes, but unordered lists are super-awesome.
+5. The release notes MUST be kept in their own file in a gem's root directory and be named to match `/^(changelog|changes|history)/i`.
+
+To see what markups the app can handle importing, check out [app/models/release_notes_parser/*](https://github.com/benhamill/changems/tree/master/app/models/release_notes_parser).
 
 ## Getting Started With The Project
 
