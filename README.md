@@ -15,6 +15,7 @@ Some ideas for features I'll be working towards. I'm open to other ideas. In no 
 - Make the version number regexp in the parser smarter and able to find "... 1.2.3 beta1 ..." even though space is not strictly allowed in a version number.
 - Some kind of auto-import for gems the app doesn't know about.
 - Some kind of check-for-updates for gems the app *does* know about.
+- Prettier URLs.
 
 ## Release Notes Parsing
 
