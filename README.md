@@ -23,7 +23,7 @@ In general, my idea is that release notes in markups like Markdown and RDoc--one
 1. The release notes MAY have whatever it wants as preamble.
 2. The release notes MUST be divided into sections describing a release with each section headed by a level 2 header (H2 tag?) followed by the release's notes.
 3. The header for a release MUST include the version number and it should be valid according to `Gem::Version.new`.
-4. The notes for a particular release MUST be in whatever format the author wishes, but unordered lists are super-awesome.
+4. The notes for a particular release MAY be in whatever format the author wishes, but unordered lists are super-awesome.
 5. The release notes MUST be kept in their own file in a gem's root directory and be named to match `/^(changelog|changes|history)/i`.
 
 To see what markups the app can handle importing, check out [app/models/release_notes_parser/*](https://github.com/benhamill/changems/tree/master/app/models/release_notes_parser).
