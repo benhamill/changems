@@ -33,7 +33,7 @@ To see what markups the app can handle importing, check out [app/models/release_
 
 ### 0. Ruby Version
 
-Changems is designed to run on Ruby **1.9.2** and RubyGems **1.8.15**. That latter is why rubygems is vendored; so I can make Heroku load that instead of the older version they're using.
+Changems is designed to run on Ruby **1.9.2**. Ideally, it would use rubygems **1.8.15**, but Heroku is still behind a bit, so some functionality is duplicated from the newer version inside the app.
 
 ### 1. Setup
 
