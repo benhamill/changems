@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120123065041) do
+ActiveRecord::Schema.define(:version => 20120129064819) do
 
   create_table "ruby_gems", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20120123065041) do
   end
 
   add_index "ruby_gems", ["featured"], :name => "index_ruby_gems_on_featured"
+  add_index "ruby_gems", ["name"], :name => "index_ruby_gems_on_name", :unique => true
 
   create_table "versions", :force => true do |t|
     t.string   "number"
@@ -36,5 +37,6 @@ ActiveRecord::Schema.define(:version => 20120123065041) do
   end
 
   add_index "versions", ["major", "minor", "patch", "prerelease"], :name => "index_versions_on_major_and_minor_and_patch_and_special"
+  add_index "versions", ["number", "ruby_gem_id"], :name => "index_versions_on_number_and_ruby_gem_id", :unique => true
 
 end
