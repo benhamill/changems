@@ -1,4 +1,6 @@
 class RubyGem < ActiveRecord::Base
+  validates :name, presence: true, uniqueness: true
+
   has_many :versions
 
   def self.featured

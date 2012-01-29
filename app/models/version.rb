@@ -1,4 +1,7 @@
 class Version < ActiveRecord::Base
+  validates :number, uniqueness: { scope: :ruby_gem_id }
+  validates :number, :notes, presence: true
+
   belongs_to :ruby_gem
 
   before_save :split_out_version_number
