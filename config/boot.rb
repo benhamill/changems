@@ -1,5 +1,11 @@
 require 'rubygems'
 
+module Gem
+  def self.host
+    "http://rubygems.org/"
+  end
+end
+
 # Set up gems listed in the Gemfile.
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 
