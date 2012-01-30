@@ -10,6 +10,7 @@ gem 'draper'
 gem 'texticle', require: 'texticle/rails'
 gem 'gems'
 gem 'treetop'
+gem 'friendly_id'
 
 gem 'redcarpet'
 gem 'rdoc'

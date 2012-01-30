@@ -3,6 +3,9 @@ class RubyGem < ActiveRecord::Base
 
   has_many :versions
 
+  extend FriendlyId
+  friendly_id :name
+
   def self.featured
     self.where(featured: true)
   end
