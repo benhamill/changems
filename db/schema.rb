@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(:version => 20120129064819) do
 
   create_table "ruby_gems", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.boolean  "featured",   :default => false
   end
 
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(:version => 20120129064819) do
   create_table "versions", :force => true do |t|
     t.string   "number"
     t.integer  "ruby_gem_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.integer  "major",          :default => 0
     t.integer  "minor",          :default => 0
     t.integer  "patch",          :default => 0
