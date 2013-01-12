@@ -24,7 +24,6 @@ end
 group :test, :development do
   gem 'pry-rails'
   gem 'pry-doc'
-  gem 'heroku'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
