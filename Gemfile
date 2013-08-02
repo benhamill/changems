@@ -7,10 +7,11 @@ gem 'thin'
 gem 'jquery-rails'
 gem 'slim'
 gem 'draper'
-gem 'texticle', '~> 2.0', require: 'texticle/rails'
+gem 'textacular', '~> 3.0'
 gem 'gems'
 gem 'treetop'
-gem 'friendly_id'
+gem 'friendly_id', github: 'FriendlyId/friendly_id'
+gem "active_model_serializers"
 
 gem 'redcarpet'
 gem 'rdoc'

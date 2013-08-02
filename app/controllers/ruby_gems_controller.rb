@@ -9,7 +9,12 @@ class RubyGemsController < ApplicationController
   end
 
   def show
-    @gem = RubyGem.find(params[:id])
+    @gem = RubyGem.friendly.find(params[:id])
     @versions = VersionDecorator.decorate(@gem.versions.semantic_order('desc'))
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @versions, each_serializer: VersionSerializer }
+    end
   end
 end
