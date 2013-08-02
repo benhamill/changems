@@ -1,25 +1,29 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.1'
+gem 'rails', '~> 4.0.0'
 
 gem 'pg'
 gem 'thin'
 gem 'jquery-rails'
 gem 'slim'
 gem 'draper'
-gem 'texticle', require: 'texticle/rails'
+gem 'textacular', '~> 3.0'
 gem 'gems'
 gem 'treetop'
-gem 'friendly_id'
+gem 'friendly_id', github: 'FriendlyId/friendly_id'
+gem "active_model_serializers"
 
 gem 'redcarpet'
 gem 'rdoc'
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-end
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.0'
+
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
 
 group :test, :development do
   gem 'pry-rails'

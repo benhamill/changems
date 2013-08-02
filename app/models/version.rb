@@ -6,14 +6,14 @@ class Version < ActiveRecord::Base
 
   before_save :split_out_version_number
 
-  def self.semantic_order(sort = 'asc')
-    self.order(
+  scope :semantic_order, ->(sort) {
+    order(
       "#{self.table_name}.major #{sort}",
       "#{self.table_name}.minor #{sort}",
       "#{self.table_name}.patch #{sort}",
       "#{self.table_name}.prerelease #{sort}"
     )
-  end
+  }
 
   def self.between(start_version, end_version)
     version_hash = {

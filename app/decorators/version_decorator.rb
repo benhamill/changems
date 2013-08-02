@@ -1,4 +1,4 @@
-class VersionDecorator < ApplicationDecorator
+class VersionDecorator < Draper::Base
   decorates :version
 
   def link_string
@@ -17,7 +17,7 @@ class VersionDecorator < ApplicationDecorator
     if file_extension.markdown?
       Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(filter_html: true, no_styles: true), no_intra_emphasis: true, fenced_code_blocks: true, autolink: true).render(version.release_notes)
     elsif file_extension.rdoc?
-      RDoc::Markup::ToHtml.new.convert(version.release_notes)
+      RDoc::Markup::ToHtml.new({}).convert(version.release_notes)
     else # Assume plaintext
       "<pre>#{version.release_notes}</pre>"
     end
